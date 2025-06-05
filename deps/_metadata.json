@@ -1,0 +1,34 @@
+{
+  "hash": "35a2ae98",
+  "configHash": "80331e8c",
+  "lockfileHash": "76998291",
+  "browserHash": "a858af2f",
+  "optimized": {
+    "react": {
+      "src": "../../../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "d5c0dd18",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "9def2e0e",
+      "needsInterop": true
+    },
+    "socket.io-client": {
+      "src": "../../../../node_modules/socket.io-client/build/esm/index.js",
+      "file": "socket__io-client.js",
+      "fileHash": "506a05fc",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-WLWY5FTX": {
+      "file": "chunk-WLWY5FTX.js"
+    },
+    "chunk-HKJ2B2AA": {
+      "file": "chunk-HKJ2B2AA.js"
+    }
+  }
+}
