@@ -77,7 +77,16 @@ io.on("connection", (socket) => {
 
 app.use(express.static("client/dist"));
 
-const PORT = process.env.PORT || 10000;
-server.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+
+// Add this health check route
+app.get('/render-health', (req, res) => {
+  res.status(200).send('OK');
+});
+
+const PORT = process.env.PORT || 5000;
+server.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server running on port ${PORT}`);
+  if (process.env.RENDER) {
+    process.stdout.write('RENDER_PORT_ACTIVATED');
+  }
 });
