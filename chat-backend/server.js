@@ -1,7 +1,8 @@
-const express = require("express");
-const http = require("http");
-const socketIo = require("socket.io");
-const cors = require("cors");
+import express from "express";
+import http from "http";
+import { Server } from "socket.io";
+import cors from "cors";
+import path from "path";
 
 
 const app = express();
@@ -79,7 +80,6 @@ io.on("connection", (socket) => {
 app.use(express.static("client/dist"));
 
 // With this (absolute path):
-import path from 'path';
 const __dirname = path.resolve();
 app.use(express.static(path.join(__dirname, '../client/dist')));
 
