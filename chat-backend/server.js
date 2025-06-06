@@ -75,8 +75,13 @@ io.on("connection", (socket) => {
   });
 });
 
+// Replace this line:
 app.use(express.static("client/dist"));
 
+// With this (absolute path):
+import path from 'path';
+const __dirname = path.resolve();
+app.use(express.static(path.join(__dirname, '../client/dist')));
 
 // Add this health check route
 app.get('/render-health', (req, res) => {
